@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './pages/Home'
+import UserDetails from './pages/UserDetails'
 
 function App() {
 
@@ -16,6 +18,11 @@ function App() {
           <Link to='/user/2'>User 2</Link>
         </li>
       </ul>
+      <Routes>
+      <Route path='/' element={<Home />}/>
+      <Route path='/user/:userId' element={<UserDetails />}/>
+
+      </Routes>
       
     </>
   )
